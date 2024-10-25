@@ -13,7 +13,7 @@
         android:theme="@style/Theme.AprendendoArquiteturaMVC"
         tools:targetApi="31">
         <activity
-            android:name=".view.cadastro.CadastroActivity"
+            android:name=".view.signup.SignUpActivity"
             android:exported="false" />
 
         <activity

@@ -7,7 +7,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.aprendendoarquiteturamvc.controller.login.LoginController
 import com.example.aprendendoarquiteturamvc.databinding.ActivityLoginBinding
-import com.example.aprendendoarquiteturamvc.view.cadastro.CadastroActivity
+import com.example.aprendendoarquiteturamvc.view.signup.SignUpActivity
 import com.example.aprendendoarquiteturamvc.view.home.HomeActivity
 
 class LoginActivity : AppCompatActivity() {
@@ -50,7 +50,7 @@ class LoginActivity : AppCompatActivity() {
 
     fun irParaTelaCadastro() {
 
-        val intent = Intent(this, CadastroActivity::class.java)
+        val intent = Intent(this, SignUpActivity::class.java)
         startActivity(intent)
         finish()
     }
