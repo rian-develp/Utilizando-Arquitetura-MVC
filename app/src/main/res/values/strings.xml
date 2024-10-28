@@ -7,7 +7,7 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
-    <!--  Para a tela SignUp  (início) -->
+    <!--  Para as telas Login e SignUp (início) -->
     <string name="signup_screen_title">Tela Cadastro</string>
     <string name="signup">Cadastrar</string>
     <string name="name">Nome:</string>
@@ -18,7 +18,7 @@
     <string name="confirm_password">Confirmar Senha:</string>
     <string name="disciple">Discipulo</string>
     <string name="leader">Líder</string>
-    <!-- Para a tela SignUp  (fim) -->
+    <!--  Para as telas Login e SignUp (fim) -->
 
     <!--  Mensagens de Erro  (início) -->
 
@@ -37,5 +37,8 @@
         <string name="invalid_email">E-mail inválido</string>
         <string name="weak_password">Por favor crie uma senha com no mínimo 6 caracteres</string>
         <string name="passwords_not_confirmed">As senhas não estão iguais</string>
+
+    <string name="invalid_email_or_password">Email ou senha inválido</string>
     <!--  Mensagens de Erro  (fim) -->
+    <string name="do_login">Fazer Login</string>
 </resources>
