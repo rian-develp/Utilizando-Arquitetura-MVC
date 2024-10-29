@@ -13,5 +13,12 @@ class HomeActivity : AppCompatActivity() {
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val intent = intent
+
+        val nomeUsuario = intent.getStringExtra("nomeUsuario")
+        val senhaUsuario = intent.getStringExtra("senhaUsuario")
+
+        binding.edtNome.text = "Nome do Usuário: $nomeUsuario"
+        binding.edtSenha.text = "Senha do Usuário: $senhaUsuario"
     }
 }
