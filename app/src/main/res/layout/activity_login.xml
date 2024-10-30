@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,74 +10,101 @@
 
 
     <TextView
+        android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingVertical="24dp"
-        android:text="Fazer Login"
+        android:text="@string/do_login"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="32sp"
-        android:textStyle="bold"/>
-
-    <EditText
-        android:id="@+id/edt_nome"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginHorizontal="24dp"
-        android:hint="Insira seu nome"
-        android:textColorHint="@color/black"
-        android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
         />
 
-    <EditText
-        android:id="@+id/edt_senha"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginHorizontal="24dp"
-        android:hint="Insira sua senha"
-        android:textColorHint="@color/black"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/botao_entrar"
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/til_mail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:layout_marginHorizontal="24dp"
-        android:text="Entrar"
-        android:textSize="16sp"
-        android:paddingVertical="8dp"
-        android:textAlignment="center"
+        android:layout_marginTop="@dimen/space_48dp"
+        android:layout_marginHorizontal="@dimen/space_16dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/title"
+        app:errorEnabled="false"
+        app:boxStrokeWidth="1dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_mail"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_64dp"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:textSize="@dimen/size_20sp"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/til_pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_32dp"
+        android:layout_marginHorizontal="@dimen/space_16dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/til_mail"
+        app:errorEnabled="false"
+        app:boxStrokeWidth="1dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_pass"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_64dp"
+            android:hint="@string/passsword"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:textSize="@dimen/size_20sp"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_do_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/til_pass"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginHorizontal="@dimen/space_24dp"
+        android:layout_marginStart="@dimen/space_24dp"
+        android:layout_marginEnd="@dimen/space_24dp"
+        android:layout_marginTop="88dp"
         android:background="@android:color/holo_green_light"
-        />
+        android:paddingVertical="@dimen/space_8dp"
+        android:text="@string/do_login"
+        android:textAlignment="center"
+        android:textSize="16sp" />
 
     <TextView
+        android:id="@+id/et_go_to_signup_activity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:layout_marginHorizontal="8dp"
-        android:text="Se você não possui uma conta clique no botão abaixo para se cadastrar"
+        android:text="Se você não possui uma conta clique aqui para se cadastrar"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="16sp"
         android:paddingVertical="24dp"
+        android:layout_below="@id/button_do_login"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
         />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/botao_ir_para_tela_cadastro"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:layout_marginHorizontal="24dp"
-        android:text="Cadastro"
-        android:textSize="16sp"
-        android:paddingVertical="8dp"
-        android:textAlignment="center"
-        android:background="@android:color/holo_blue_light"
-        />
-</LinearLayout>
+</RelativeLayout>
