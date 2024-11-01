@@ -20,8 +20,14 @@
     <string name="leader">Líder</string>
     <!--  Para as telas Login e SignUp (fim) -->
 
-    <!--  Mensagens de Erro  (início) -->
+    <!--  Para a tela InsertCard (início) -->
+    <string name="card_number_label">Número do cartão</string>
+    <string name="card_name_label">Nome do cartão</string>
+    <string name="card_validity_label">Validade do cartão</string>
+    <string name="customer_name_label">Titular do cartão</string>
+    <!--  Para a tela InsertCard (fim) -->
 
+    <!--  Mensagens de Erro  (início) -->
         <!--  Para os campos em branco ou vazios  -->
         <string name="name_is_blank_or_empty">Por favor insira seu nome</string>
         <string name="birthdate_is_blank_or_empty">Por favor insira sua data de nascimento</string>
