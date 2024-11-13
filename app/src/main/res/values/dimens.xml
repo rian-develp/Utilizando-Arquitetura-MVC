@@ -6,10 +6,8 @@
     <dimen name="space_48dp">48dp</dimen>
     <dimen name="space_32dp">32dp</dimen>
     <dimen name="space_24dp">24dp</dimen>
-    <dimen name="space_20dp">20dp</dimen>
     <dimen name="space_16dp">16dp</dimen>
     <dimen name="space_8dp">8dp</dimen>
-    <dimen name="space_4dp">4dp</dimen>
 
         <!-- Tamanhos de Texto -->
     <dimen name="size_32sp">32sp</dimen>
