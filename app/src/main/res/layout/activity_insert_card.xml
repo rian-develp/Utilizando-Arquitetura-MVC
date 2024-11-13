@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray">
+
+
+    <View
+        android:id="@+id/custom_app_bar"
+        android:layout_height="80dp"
+        android:layout_width="match_parent"
+        android:background="@color/dark_blue"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        />
+
+    <ImageView
+        android:id="@+id/arrow_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_arrow_back"
+        android:layout_marginStart="@dimen/space_16dp"
+        android:layout_alignBottom="@id/custom_app_bar"
+        android:layout_alignStart="@id/custom_app_bar"
+        android:layout_alignTop="@id/custom_app_bar"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/custom_app_bar"
+        android:layout_alignEnd="@id/custom_app_bar"
+        android:layout_alignStart="@id/arrow_back"
+        android:layout_marginBottom="@dimen/space_20dp"
+        android:text="Insert Card"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size_32sp"
+        android:textStyle="bold"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_container"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/custom_app_bar"
+        android:elevation="24dp"
+        app:cardCornerRadius="@dimen/space_16dp"
+        android:layout_margin="@dimen/space_32dp">
+
+        <RelativeLayout
+            android:id="@+id/card"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/card_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Card Name"
+                android:textSize="@dimen/size_16sp"
+                android:textStyle="bold"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:padding="@dimen/space_16dp"
+                />
+
+            <ImageView
+                android:id="@+id/card_img"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/space_8dp"
+                android:layout_marginEnd="@dimen/space_16dp"/>
+
+            <TextView
+                android:id="@+id/customerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:text="Customer Name"
+                android:textSize="@dimen/size_16sp"
+                android:textStyle="bold"
+                android:padding="@dimen/space_16dp"
+                />
+
+            <TextView
+                android:id="@+id/card_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="cardNumber"
+                android:textSize="@dimen/size_16sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/cardValidity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:text="Card Validity"
+                android:textSize="@dimen/size_16sp"
+                android:textStyle="bold"
+                android:paddingBottom="@dimen/space_16dp"
+                android:layout_marginEnd="@dimen/space_20dp"
+                />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/til_card_name"
+        android:layout_below="@id/card_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/space_16dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        app:errorEnabled="false"
+        app:boxStrokeWidth="1dp"
+        app:placeholderText="Ex: Visa, PicPay, MasterCard"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_card_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_64dp"
+            android:hint="@string/card_name_label"
+            android:maxLines="1"
+            android:inputType="text"
+            android:textSize="@dimen/size_20sp"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/til_card_number"
+        android:layout_below="@id/til_card_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/space_24dp"
+        android:layout_marginHorizontal="@dimen/space_16dp"
+        app:errorEnabled="false"
+        app:boxStrokeWidth="1dp"
+        app:placeholderText="Insira seu nome como está no cartão"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_card_number"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_64dp"
+            android:hint="@string/card_number_label"
+            android:maxLines="1"
+            android:inputType="text"
+            android:textSize="@dimen/size_20sp"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/til_card_validity"
+        android:layout_below="@id/til_card_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/space_24dp"
+        android:layout_marginHorizontal="@dimen/space_16dp"
+        app:errorEnabled="false"
+        app:boxStrokeWidth="1dp"
+        app:placeholderText="Ex: 12/2024"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_card_validity"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_64dp"
+            android:hint="@string/card_validity_label"
+            android:maxLines="1"
+            android:inputType="text"
+            android:textSize="@dimen/size_20sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/til_customer_name"
+        android:layout_below="@id/til_card_validity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/space_24dp"
+        android:layout_marginHorizontal="@dimen/space_16dp"
+        app:errorEnabled="false"
+        app:boxStrokeWidth="1dp"
+        app:placeholderText="Insira seu nome como está no cartão"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_customer_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_64dp"
+            android:hint="@string/customer_name_label"
+            android:maxLines="1"
+            android:inputType="textCapWords"
+            android:textSize="@dimen/size_20sp"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="@dimen/space_16dp"
+        android:background="@color/blue"
+        android:layout_below="@id/til_customer_name"
+        android:layout_marginTop="@dimen/space_64dp"
+        android:text="Inserir Cartão"
+        android:textSize="@dimen/size_16sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"/>
+</RelativeLayout>
+</androidx.core.widget.NestedScrollView>
