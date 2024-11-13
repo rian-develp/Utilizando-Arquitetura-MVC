@@ -4,7 +4,19 @@ import com.example.aprendendoarquiteturamvc.model.Card
 
 class InsertCardController: InsertCardControllerInterface{
 
-    override fun createCard(card: Card): Boolean {
-        TODO("Not yet implemented")
+    private lateinit var card: Card
+
+    override fun createCard(
+        cardName: String,
+        cardNumber: String,
+        cardValidity: String,
+        customerName: String,
+        color: Int,
+        img: String
+    ): Boolean {
+        card = Card(cardName, cardValidity, cardNumber, color, customerName, img)
+        return true
     }
+
+
 }
