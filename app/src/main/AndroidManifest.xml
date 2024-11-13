@@ -29,7 +29,21 @@
 
         <activity
             android:name=".view.home.HomeActivity"
+<<<<<<< HEAD
             android:exported="false" />
+=======
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".view.insertCard.InsertCardActivity"
+            android:exported="false"/>
+>>>>>>> 53ef90d51355984e5b02bf374a493f1837d09a70
     </application>
 
 </manifest>

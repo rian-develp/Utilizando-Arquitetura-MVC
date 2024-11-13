@@ -16,6 +16,7 @@ class HomeActivity : AppCompatActivity() {
         val intent = intent
 
 
+
         val nomeUsuario = intent.getStringExtra("nomeUsuario")
         val senhaUsuario = intent.getStringExtra("senhaUsuario")
 
